@@ -1,0 +1,21 @@
+<div *ngIf="client" class="container">
+    <h2 class="mb-4">Edit Client</h2>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" class="form-control" [(ngModel)]="client.name" placeholder="Name" />
+    </div>
+    <div class="mb-3">
+        <label for="weight" class="form-label">Weight:</label>
+        <input type="number" id="weight" class="form-control" [(ngModel)]="client.weight" placeholder="Weight" />
+    </div>
+    <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" class="form-control" [(ngModel)]="client.dateOfBirth" />
+    </div>
+    <div class="mb-3">
+        <label for="photo" class="form-label">Photo URL:</label>
+        <input type="text" id="photo" class="form-control" [(ngModel)]="client.photo" placeholder="Photo URL" />
+    </div>
+    <button (click)="save()" class="btn btn-primary me-2">Save</button>
+    <button (click)="goBack()" class="btn btn-secondary">Cancel</button>
+</div>
